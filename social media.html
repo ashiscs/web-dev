@@ -1,0 +1,111 @@
+<html>
+<head>
+	<title>Social Media Hover</title>
+	<style>
+		body{
+			padding:0;
+			margin:0;
+			background:linear-gradient(135deg,blue,yellow,red,green);
+		}
+
+		.middle{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+			text-align: center;
+			width:100%;
+
+		}
+		.btn{
+			display: inline-block;
+			width:90px;
+			height:90px;
+			border-radius: 30%;
+			background:#f1f1f1;
+			margin:10px;
+			box-shadow:0 5px 15px -5px green;
+			color:#3498db;
+			overflow: hidden;
+			position: relative;
+
+		}
+		.btn i{
+			line-height:90px;
+			font-size:26px;
+			transition: 0.4s linear;
+		}
+		.btn:hover i{
+			transform:rotate(360deg);
+			color:#f1f1f1;
+
+		}
+		.btn::before{
+
+			content:"";
+			position:absolute;
+			width:120%;
+			height: 120%;
+			background: #3498db;
+			transform: rotate(45deg);
+			left:-110%;
+			top:90%;
+
+
+		}
+		.btn:hover::before{
+
+			animation: aaa 0.7s 1;
+			top:-10%;
+			left:-10%;
+		}
+		@keyframes aaa{
+			0%{
+				left:-110%;
+				top:90%;
+			}
+			50%{
+				left:10%;
+				top:-30%;
+
+			}
+			100%{
+				top:-10%;
+				left:-10%;
+
+			}
+		}
+
+
+
+	</style>
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+<body>
+	<div class="middle">
+		<a class="btn" href="#">
+			<i class="fab fa-facebook-f"></i>
+		</a>
+<a class="btn" href="#">
+			<i class="fab fa-twitter"></i>
+		</a>
+		<a class="btn" href="#">
+			<i class="fab fa-google"></i>
+		</a>
+		<a class="btn" href="#">
+			<i class="fab fa-instagram"></i>
+		</a>
+		<a class="btn" href="#">
+			<i class="fab fa-youtube"></i>
+		</a>
+
+
+
+
+
+
+
+</div>
+
+	</body>
+	</html>
