@@ -1,0 +1,100 @@
+<html>
+<head>
+	<title>Flip Card Effect</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+			text-decoration:none;
+			font-family:"montserrat";
+		}
+		body{
+			background:#333;
+		}
+		.m{
+			position:absolute;
+			top:50%;
+			left:50%;
+			transform:translate(-50%,-50%);
+		}
+		.card{
+			cursor:pointer;
+			width:340px;
+			height:480px;
+		}
+		.front,.back{
+			width:100%;
+			height:100%;
+			overflow:hidden;
+			backface-visibility: hidden;
+			position:absolute;
+			transition: transform 2s linear;
+		}
+		.front img{
+			height:100%;
+		}
+		.front{
+		transform:perspective(600px) rotateY(0deg);	
+		}
+		.back{
+			background: #f1f1f1;
+			transform:perspective(600px) rotateY(180deg);
+		}
+		.b-c{
+			color:#2c3e50;
+			text-align:center;
+			width:100%;
+		}
+		.sm{
+			margin:20px 0;
+		}
+		.sm a{
+			display:inline-flex;
+			width:40px;
+			height:40px;
+			justify-content: center;
+			align-items:center;
+			color:#2c3e50;
+			font-size:18px;
+			transition:0.4s;
+			border-radius: 50%;
+		}
+		.sm a:hover{
+			background:#2c3e50;
+			color:white;
+		}
+		.card:hover>.front{
+			background: #f1f1f1;
+			transform:perspective(600px) rotateY(-180deg);
+		}
+
+.card:hover>.back{
+			background: #f1f1f1;
+			transform:perspective(600px) rotateY(0deg);
+		}
+
+	</style>
+	<link rel="stylesheet" href="	https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+</head>
+<body>
+<div class="card m">
+	<div class="front">
+		<img src="eiffel-tower.jpg">
+	</div>
+	<div class="back">
+		<div class="b-c m">
+			<h2>Ashis</h2>
+			<span>Information</span>
+			<div class="sm">
+				<a href="#"><i class="fab fa-facebook-f"></i></a>
+				<a href="#"><i class="fab fa-twitter"></i></a>
+				<a href="#"><i class="fab fa-youtube"></i></a>
+				<a href="#"><i class="fab fa-instagram"></i></a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	</body>
+	</html>
