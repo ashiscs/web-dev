@@ -1,0 +1,35 @@
+<html>
+<head>
+	<title>Ripple Effect</title>
+	<style>
+		body{
+			margin:0;
+			padding:0;
+		}
+		.full{
+			width:100%;
+			height:100vh;
+			background:url(c.jpg) no-repeat center;
+
+			background-size: cover;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+		
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.ripples/0.5.3/jquery.ripples.min.js"></script>
+</head>
+<body>
+<div class="full">
+
+
+</div>
+<script>
+$(".full").ripples({
+resolution:200,
+perturbance:0.04,
+});
+
+</script>
+	</body>
+	</html>
